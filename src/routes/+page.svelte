@@ -1,6 +1,5 @@
 <script lang="ts">
-	import Paragraph from "$lib/comps/paragraph.svelte";
-import Content from "$lib/comps/paragraph.svelte";
+import Paragraph from "$lib/comps/paragraph.svelte";
 import Subtitle from "$lib/comps/subtitle.svelte";
 </script>
 
