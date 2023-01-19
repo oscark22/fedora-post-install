@@ -2,6 +2,7 @@
 	import Paragraph from "$lib/comps/paragraph.svelte";
 	import Subtitle from "$lib/comps/subtitle.svelte";
 	import Image from "$lib/comps/image.svelte";
+	import CodeSnippet from "$lib/comps/code-snippet.svelte";
 	import random_doggo from "$lib/images/random_doggo.jpg";
 </script>
 
@@ -42,15 +43,7 @@
 					fugit laborum cupiditate, harum eum, hic consequatur. Ad, minus.
 				</Paragraph>
 				<Image img_src={random_doggo} />
-			</div>
-			<div class="flex flex-col">
-				<Subtitle text="Install RPM Fusion" />
-				<Paragraph>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officia ipsam, o	
-					dit consectetur quam non asperiores voluptatem incidunt corporis fugiat perferendis 	
-					fugit laborum cupiditate, harum eum, hic consequatur. Ad, minus.
-				</Paragraph>
-				<Image img_src={random_doggo} />
+				<CodeSnippet text="sudo apt update" />
 			</div>
 		</div>
 	</div>
