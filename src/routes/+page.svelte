@@ -1,6 +1,8 @@
 <script lang="ts">
-import Paragraph from "$lib/comps/paragraph.svelte";
-import Subtitle from "$lib/comps/subtitle.svelte";
+	import Paragraph from "$lib/comps/paragraph.svelte";
+	import Subtitle from "$lib/comps/subtitle.svelte";
+	import Image from "$lib/comps/image.svelte";
+	import random_doggo from "$lib/images/random_doggo.jpg";
 </script>
 
 <svelte:head>
@@ -20,24 +22,36 @@ import Subtitle from "$lib/comps/subtitle.svelte";
 			</div>
 		</div>
 	</nav>
-	<div class="px-4">
-		<div class="flex my-12 justify-center">
-			<div class="flex flex-col space-y-2 text-center">
-				<p class="font-semibold text-4xl">
-					Fedora Post-Install
-				</p>
-				<p class="text-2xl text-gray-500">
-					The ultimate post-installation guide for Fedora Linux.
-				</p>
+	<div class="flex justify-center px-4">
+		<div class="flex flex-col max-w-2xl">
+			<div class="flex my-20 justify-center">
+				<div class="flex flex-col space-y-2 text-center">
+					<p class="font-semibold text-4xl md:text-5xl mb-1">
+						Fedora Post-Install
+					</p>
+					<p class="text-2xl text-gray-500">
+						The ultimate post-installation guide for Fedora Linux.
+					</p>
+				</div>
 			</div>
-		</div>
-		<div class="flex flex-col">
-			<Subtitle text="Install RPM Fusion" />
-			<Paragraph>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officia ipsam, o	
-				dit consectetur quam non asperiores voluptatem incidunt corporis fugiat perferendis 	
-				fugit laborum cupiditate, harum eum, hic consequatur. Ad, minus.
-			</Paragraph>
+			<div class="flex flex-col">
+				<Subtitle text="Install RPM Fusion" />
+				<Paragraph>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officia ipsam, o	
+					dit consectetur quam non asperiores voluptatem incidunt corporis fugiat perferendis 	
+					fugit laborum cupiditate, harum eum, hic consequatur. Ad, minus.
+				</Paragraph>
+				<Image img_src={random_doggo} />
+			</div>
+			<div class="flex flex-col">
+				<Subtitle text="Install RPM Fusion" />
+				<Paragraph>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officia ipsam, o	
+					dit consectetur quam non asperiores voluptatem incidunt corporis fugiat perferendis 	
+					fugit laborum cupiditate, harum eum, hic consequatur. Ad, minus.
+				</Paragraph>
+				<Image img_src={random_doggo} />
+			</div>
 		</div>
 	</div>
 </div>
