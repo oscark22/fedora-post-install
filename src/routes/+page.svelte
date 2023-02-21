@@ -55,7 +55,9 @@
 						Press the home button followed by the word <span class="underline">terminal</span> 
 						and press Enter. A new terminal will open. Type the following command to update your system:
 					</Paragraph>
-					<CodeSnippet text="sudo dnf upgrade" />
+					<CodeSnippet>
+						sudo dnf upgrade
+					</CodeSnippet>
 					<Paragraph>
 						Remember to type 'y' when prompted for a confirmation to proceed with the installation.
 					</Paragraph>
@@ -75,8 +77,37 @@
 						the RPM Fusion following <Redirect link="https://rpmfusion.org/Configuration">page</Redirect>. We recommend installing 	
 						both of them. To do this, open the terminal and run the following command:
 					</Paragraph>
-					<CodeSnippet text="sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm" />
-				<Image img_src={random_doggo} />
+					<CodeSnippet>
+						sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+					</CodeSnippet>
+				<Subtitle text="3. Install Additional Plugins" />
+					<Paragraph>
+						As for now, you still can't play various types of video and audio types in your system. To do so, you need to install the 	
+						following packages that provide multimedia plugins:
+					</Paragraph>
+					<ParagraphItalic>
+						Note: this step requires the installation of RPM Fusion.
+					</ParagraphItalic>
+					<CodeSnippet>
+						sudo dnf install gstreamer1-plugins-{'{'}bad-\*,good-\*,base{'}'} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
+sudo dnf install lame\* --exclude=lame-devel
+sudo dnf group upgrade --with-optional Multimedia
+					</CodeSnippet>
+					<Paragraph>
+						For more information visit this <Redirect link="https://docs.fedoraproject.org/en-US/quick-docs/assembly_installing-plugins-for-playing-movies-and-music/">page</Redirect> 
+						from the fedora docs.
+					</Paragraph>
+					<Paragraph>
+						You can additionally install media players that include some of video and audio codecs by themselves. Some of the most popular players include 	
+						<Redirect link="https://www.videolan.org/vlc/">vlc</Redirect> and <Redirect link="https://mpv.io/">mpv</Redirect>.
+					</Paragraph>
+					<Paragraph>
+						If you wish to install the vlc media player (Recommended), you can do so with the following command:
+					</Paragraph>
+					<CodeSnippet>
+						sudo dnf install vlc
+					</CodeSnippet>
+					<Image img_src={random_doggo} />
 			</div>
 		</div>
 	</div>
