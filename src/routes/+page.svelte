@@ -6,6 +6,7 @@
 	import random_doggo from "$lib/images/random_doggo.jpg";
 	import Title from "$lib/comps/title.svelte";
 	import ParagraphItalic from "$lib/comps/paragraph-italic.svelte";
+	import Redirect from "$lib/comps/redirect.svelte";
 </script>
 
 <svelte:head>
@@ -59,6 +60,22 @@
 						Remember to type 'y' when prompted for a confirmation to proceed with the installation.
 					</Paragraph>
 				<Subtitle text="2. Install RPM Fusion" />
+					<Paragraph>
+						Fedora can't ship many packages that considerable improve your experience because of the legal 
+						reasons that Red Hat (the company which sponsorships Fedora) is bound by. To learn more about this 
+						topic you can refer to <Redirect link="https://docs.fedoraproject.org/en-US/legal/">Fedora's Legal Resources</Redirect>.
+					</Paragraph>
+					<Paragraph>
+						RPM Fusion, as stated in their <Redirect link="https://rpmfusion.org/">website</Redirect>, “provides 	
+						software that the Fedora Project or Red Hat doesn't want to ship. That software is provided as precompiled RPMs 	
+						for all current Fedora versions and current Red Hat Enterprise Linux or clones versions.”
+					</Paragraph>
+					<Paragraph>
+						They're two different software repositories which you can enable: free and non-free. For more information consult 	
+						the RPM Fusion following <Redirect link="https://rpmfusion.org/Configuration">page</Redirect>. We recommend installing 	
+						both of them. To do this, open the terminal and run the following command:
+					</Paragraph>
+					<CodeSnippet text="sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm" />
 				<Image img_src={random_doggo} />
 			</div>
 		</div>
