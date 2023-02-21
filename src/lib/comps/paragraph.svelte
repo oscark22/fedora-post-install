@@ -1,3 +1,3 @@
-<p class="leading-relaxed mb-4">
+<p class="leading-relaxed mb-2">
     <slot />
 </p>

@@ -4,6 +4,8 @@
 	import Image from "$lib/comps/image.svelte";
 	import CodeSnippet from "$lib/comps/code-snippet.svelte";
 	import random_doggo from "$lib/images/random_doggo.jpg";
+	import Title from "$lib/comps/title.svelte";
+	import ParagraphItalic from "$lib/comps/paragraph-italic.svelte";
 </script>
 
 <svelte:head>
@@ -36,14 +38,28 @@
 				</div>
 			</div>
 			<div class="flex flex-col">
-				<Subtitle text="Install RPM Fusion" />
-				<Paragraph>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus officia ipsam, o	
-					dit consectetur quam non asperiores voluptatem incidunt corporis fugiat perferendis 	
-					fugit laborum cupiditate, harum eum, hic consequatur. Ad, minus.
-				</Paragraph>
+				<Title text="Base configuration"></Title>
+				<Subtitle text="1. Update the system" />
+					<Paragraph>
+						We can update Fedora after installing it one of two ways, the first one is 	
+						using the graphical interface and the second via the terminal.
+					</Paragraph>
+					<ParagraphItalic>
+						If you want update your system using the graphical interface:
+					</ParagraphItalic>
+					<ParagraphItalic>
+						If you want to update your system using the terminal:
+					</ParagraphItalic>
+					<Paragraph>
+						Press the home button followed by the word <span class="underline">terminal</span> 
+						and press Enter. A new terminal will open. Type the following command to update your system:
+					</Paragraph>
+					<CodeSnippet text="sudo dnf upgrade" />
+					<Paragraph>
+						Remember to type 'y' when prompted for a confirmation to proceed with the installation.
+					</Paragraph>
+				<Subtitle text="2. Install RPM Fusion" />
 				<Image img_src={random_doggo} />
-				<CodeSnippet text="sudo apt update" />
 			</div>
 		</div>
 	</div>

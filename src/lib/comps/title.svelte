@@ -2,4 +2,4 @@
     export let text: string
 </script>
 
-<p class="font-semibold text-2xl mt-4 mb-4">{ text }</p>
+<p class="font-semibold text-3xl mb-6">{ text }</p>
