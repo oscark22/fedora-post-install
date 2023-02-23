@@ -28,7 +28,7 @@
 	</nav>
 	<div class="flex justify-center px-4">
 		<div class="flex flex-col max-w-2xl">
-			<div class="flex my-20 justify-center">
+			<div class="flex mt-20 mb-8 justify-center">
 				<div class="flex flex-col space-y-2 text-center">
 					<p class="font-semibold text-4xl md:text-5xl mb-1">
 						Fedora Post-Install
@@ -108,6 +108,36 @@ sudo dnf group upgrade --with-optional Multimedia
 						sudo dnf install vlc
 					</CodeSnippet>
 					<Image img_src={random_doggo} />
+				<Title text="Additional configuration" />
+				<Subtitle text="1. Upgrade dnf for faster downloads" />
+					<Paragraph>
+						The package manager that comes out of the box with Fedora is called dnf. They're a lot of options out 	
+						there that allow you to configure dnf according to your necessities. To properly configure it, open 	
+						the terminal and type the following command:
+					</Paragraph>
+					<CodeSnippet>
+						sudo nano /etc/dnf/dnf.conf
+					</CodeSnippet>
+					<Paragraph>
+						They're a lot of different configurations which you can tweak according to your necessities. One 	
+						of the most used configurations is the following:
+					</Paragraph>
+					<CodeSnippet>
+						max_parallel_downloads=10
+					</CodeSnippet>
+					<Paragraph>
+						To include this configuration, insert this line at the end of the document.
+					</Paragraph>
+					<Paragraph>
+						If you're interested in tweaking any additional configuration of dnf, you can consult the official	
+						<Redirect link="https://dnf.readthedocs.io/en/latest/conf_ref.html">documentation</Redirect>.
+					</Paragraph>
+				<Subtitle text="2. Add a shortcut for opening the terminal quickly" />
+					<Paragraph>
+						If you're a programmer, probably you have already tried opening the terminal with Ctrl+Shift+T as this is 	
+						the usual default shortcut in other distributions. If you want to want to add a new shortcut for the 	
+						terminal you can do it the following way:
+					</Paragraph>
 			</div>
 		</div>
 	</div>
