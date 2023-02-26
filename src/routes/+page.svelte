@@ -138,6 +138,9 @@ sudo dnf group upgrade --with-optional Multimedia
 						the usual default shortcut in other distributions. If you want to want to add a new shortcut for the 	
 						terminal you can do it the following way:
 					</Paragraph>
+					<Paragraph>
+						Press the home button followed by the word Configure and press Enter.
+					</Paragraph>
 			</div>
 		</div>
 	</div>
