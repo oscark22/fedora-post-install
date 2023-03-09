@@ -4,6 +4,8 @@
 	import Image from "$lib/comps/image.svelte";
 	import CodeSnippet from "$lib/comps/code-snippet.svelte";
 	import random_doggo from "$lib/images/random_doggo.jpg";
+	import penguins from "$lib/images/penguins.jpg";
+	import fedora from "$lib/images/fedora.jpg";
 	import Title from "$lib/comps/title.svelte";
 	import ParagraphItalic from "$lib/comps/paragraph-italic.svelte";
 	import Redirect from "$lib/comps/redirect.svelte";
@@ -27,7 +29,7 @@
 		</div>
 	</nav>
 	<div class="flex justify-center px-4">
-		<div class="flex flex-col max-w-2xl">
+		<div class="flex flex-col max-w-4xl">
 			<div class="flex mt-20 mb-8 justify-center">
 				<div class="flex flex-col space-y-2 text-center">
 					<p class="font-semibold text-4xl md:text-5xl mb-1">
@@ -38,6 +40,7 @@
 					</p>
 				</div>
 			</div>
+			<Image img_src={fedora} />
 			<div class="flex flex-col">
 				<Title text="Base configuration"></Title>
 				<Subtitle text="1. Update the system" />
@@ -61,7 +64,7 @@
 					<Paragraph>
 						Remember to type 'y' when prompted for a confirmation to proceed with the installation.
 					</Paragraph>
-				<Subtitle text="2. Install RPM Fusion" />
+					<Subtitle text="2. Install RPM Fusion" />
 					<Paragraph>
 						Fedora can't ship many packages that considerable improve your experience because of the legal 
 						reasons that Red Hat (the company which sponsorships Fedora) is bound by. To learn more about this 
@@ -77,9 +80,9 @@
 						the RPM Fusion following <Redirect link="https://rpmfusion.org/Configuration">page</Redirect>. We recommend installing 	
 						both of them. To do this, open the terminal and run the following command:
 					</Paragraph>
-					<CodeSnippet>
+					<!-- <CodeSnippet>
 						sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-					</CodeSnippet>
+					</CodeSnippet> -->
 				<Subtitle text="3. Install Additional Plugins" />
 					<Paragraph>
 						As for now, you still can't play various types of video and audio types in your system. To do so, you need to install the 	
@@ -88,11 +91,11 @@
 					<ParagraphItalic>
 						Note: this step requires the installation of RPM Fusion.
 					</ParagraphItalic>
-					<CodeSnippet>
+					<!-- <CodeSnippet>
 						sudo dnf install gstreamer1-plugins-{'{'}bad-\*,good-\*,base{'}'} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
 sudo dnf install lame\* --exclude=lame-devel
 sudo dnf group upgrade --with-optional Multimedia
-					</CodeSnippet>
+					</CodeSnippet> -->
 					<Paragraph>
 						For more information visit this <Redirect link="https://docs.fedoraproject.org/en-US/quick-docs/assembly_installing-plugins-for-playing-movies-and-music/">page</Redirect> 
 						from the fedora docs.
@@ -104,9 +107,9 @@ sudo dnf group upgrade --with-optional Multimedia
 					<Paragraph>
 						If you wish to install the vlc media player (Recommended), you can do so with the following command:
 					</Paragraph>
-					<CodeSnippet>
+					<!-- <CodeSnippet>
 						sudo dnf install vlc
-					</CodeSnippet>
+					</CodeSnippet> -->
 					<Image img_src={random_doggo} />
 				<Title text="Additional configuration" />
 				<Subtitle text="1. Upgrade dnf for faster downloads" />
